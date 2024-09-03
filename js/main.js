@@ -13,7 +13,10 @@ function validarCantidad(){
         return false;
     }//isNaN
 
-    
+    if(Number(txtNumber.value)<=0){
+        return false;
+    }//<=0
+
     return true;
 }//validarCantidad()
 
@@ -34,13 +37,12 @@ btnAgregar.addEventListener("click", function (event){
 //Validar la cantidad.    
 if(! validarCantidad()){
     txtNumber.style.border="solid red medium";
-alertValidacionesTexto.innerHTML="La <strong>Cantidad</strong> no es correcta.<br/>";
+    alertValidacionesTexto.innerHTML="La <strong>Cantidad</strong> no es correcta.<br/>";
     alertValidaciones.style.display="block";
-    return false;
-}//if length<3
+}//! validarCantidad
 
-
-    if(txtNombre.value)
-
-
-})
+}); //btnAgregar.addEventListener
+// evento blur es cuando un campo pierde el foco, se sale del campo.
+textNombre.addEventListener("blur", function(event){
+    txtNombre.vaue = txtNombre.value.trim();
+}); //txtNombre.addEventListener
