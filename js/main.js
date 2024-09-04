@@ -110,6 +110,7 @@ btnClear.addEventListener("click", function(event){
     //Elimina todo el contenido del localStorage
     localStorage. clear();
     //Limpiar la tabla
+    cuerpoTabla.innerHTML="";
     //Reiniciar la variable, contador, costo Total, totalEnProductos
     contador=0;
     costoTotal=0;
